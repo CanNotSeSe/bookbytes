@@ -229,11 +229,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text(
-            "EULA",
-            style: TextStyle(),
-          ),
+          title: const Text("EULA", style: TextStyle()),
           content: SizedBox(
+            // Get screen width and height using MediaQuery
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Column(
@@ -241,23 +239,23 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 Expanded(
                   flex: 1,
                   child: SingleChildScrollView(
-                      child: RichText(
-                    softWrap: true,
-                    textAlign: TextAlign.justify,
-                    text: TextSpan(
+                    child: RichText(
+                      softWrap: true,
+                      textAlign: TextAlign.justify,
+                      text: TextSpan(
                         style: const TextStyle(
                             fontSize: 12.0, color: Colors.black),
-                        text: eula),
-                  )),
+                        text: eula,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text(
-                "Close",
-              ),
+              child: const Text("Close"),
               onPressed: () {
                 Navigator.of(context).pop();
               },
