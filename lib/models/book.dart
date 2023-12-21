@@ -8,6 +8,7 @@ class Book {
   String? bookPrice;
   String? bookQty;
   String? bookDate;
+  String? bookStatus;
 
   Book(
       {this.bookId,
@@ -18,6 +19,7 @@ class Book {
       this.bookAuthor,
       this.bookPrice,
       this.bookQty,
+      this.bookStatus,
       this.bookDate});
 
   Book.fromJson(Map<String, dynamic> json) {
@@ -30,6 +32,7 @@ class Book {
     bookPrice = json['book_price'];
     bookQty = json['book_qty'];
     bookDate = json['book_date'];
+    bookStatus = json['book_status'];
   }
 
   Map<String, dynamic> toJson() {
@@ -43,6 +46,7 @@ class Book {
     data['book_price'] = bookPrice;
     data['book_qty'] = bookQty;
     data['book_date'] = bookDate;
+    data['book_status'] = bookStatus;
     return data;
   }
 }
